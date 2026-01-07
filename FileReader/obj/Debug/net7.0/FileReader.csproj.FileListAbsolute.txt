@@ -1,0 +1,15 @@
+/Users/chencho/Documents/CUAVs/Canadian-UAVs-Coding-Challenge/FileReader/bin/Debug/net7.0/FileReader
+/Users/chencho/Documents/CUAVs/Canadian-UAVs-Coding-Challenge/FileReader/bin/Debug/net7.0/FileReader.deps.json
+/Users/chencho/Documents/CUAVs/Canadian-UAVs-Coding-Challenge/FileReader/bin/Debug/net7.0/FileReader.runtimeconfig.json
+/Users/chencho/Documents/CUAVs/Canadian-UAVs-Coding-Challenge/FileReader/bin/Debug/net7.0/FileReader.dll
+/Users/chencho/Documents/CUAVs/Canadian-UAVs-Coding-Challenge/FileReader/bin/Debug/net7.0/FileReader.pdb
+/Users/chencho/Documents/CUAVs/Canadian-UAVs-Coding-Challenge/FileReader/obj/Debug/net7.0/FileReader.csproj.AssemblyReference.cache
+/Users/chencho/Documents/CUAVs/Canadian-UAVs-Coding-Challenge/FileReader/obj/Debug/net7.0/FileReader.GeneratedMSBuildEditorConfig.editorconfig
+/Users/chencho/Documents/CUAVs/Canadian-UAVs-Coding-Challenge/FileReader/obj/Debug/net7.0/FileReader.AssemblyInfoInputs.cache
+/Users/chencho/Documents/CUAVs/Canadian-UAVs-Coding-Challenge/FileReader/obj/Debug/net7.0/FileReader.AssemblyInfo.cs
+/Users/chencho/Documents/CUAVs/Canadian-UAVs-Coding-Challenge/FileReader/obj/Debug/net7.0/FileReader.csproj.CoreCompileInputs.cache
+/Users/chencho/Documents/CUAVs/Canadian-UAVs-Coding-Challenge/FileReader/obj/Debug/net7.0/FileReader.dll
+/Users/chencho/Documents/CUAVs/Canadian-UAVs-Coding-Challenge/FileReader/obj/Debug/net7.0/refint/FileReader.dll
+/Users/chencho/Documents/CUAVs/Canadian-UAVs-Coding-Challenge/FileReader/obj/Debug/net7.0/FileReader.pdb
+/Users/chencho/Documents/CUAVs/Canadian-UAVs-Coding-Challenge/FileReader/obj/Debug/net7.0/FileReader.genruntimeconfig.cache
+/Users/chencho/Documents/CUAVs/Canadian-UAVs-Coding-Challenge/FileReader/obj/Debug/net7.0/ref/FileReader.dll
