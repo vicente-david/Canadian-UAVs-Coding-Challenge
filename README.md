@@ -6,6 +6,11 @@ The two sensors provide different output formats: one sensor outputs data in CSV
 ## Output Data
 The output should consist of pairs of IDs, where one ID is from the first sensor, and the second ID is from the second sensor.
 
+## How To Run The SensorDataReader.cs Solution
+The SensorDataReader.cs program should be ran with 2 command line arguments, where the first argument is the csv data, and the second argument is the json data. To run, should use the following command in the terminal:
+```dotnet run <data.csv> <data.json>```
+
 ## Designed by:
 Vicente David
+
 vicentedavid26@gmail.com
