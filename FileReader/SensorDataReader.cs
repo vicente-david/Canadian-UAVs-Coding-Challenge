@@ -28,7 +28,7 @@ class SensorDataReader
             if (string.IsNullOrWhiteSpace(line)) continue;
             var fields = line.Split(',');
 
-            sensors.Add(new SensorRow(int.Parse(fields[0]), double.Parse(fields[1]), double.Parse(fields[2])));
+            sensors.Add(new SensorData(int.Parse(fields[0]), double.Parse(fields[1]), double.Parse(fields[2])));
         }
 
         Console.WriteLine($"CSV Rows: {sensors.Count}");
