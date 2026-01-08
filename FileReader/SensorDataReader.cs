@@ -15,10 +15,11 @@ class SensorDataReader
         // calculate the great-circle distance between two points on a sphere using Haversine formula. 
         const double r = 6371000; // radius of the earth in meters
         
-        var dLat = ToRad(lat2 - lat1);
-        var dLon = ToRad(lon2 - lon1);
+        // need radians for trig functions
+        var deltaLat = ToRad(lat2 - lat1);
+        var deltaLon = ToRad(lon2 - lon1);
 
-        var a = Math.Sin(dLat / 2) * Math.Sin(dLat / 2) + Math.Cos(ToRad(lat1)) * Math.Cos(ToRad(lat2)) * Math.Sin(dLon / 2) * Math.Sin(dLon / 2);
+        var a = Math.Sin(deltaLat / 2) * Math.Sin(deltaLat / 2) + Math.Cos(ToRad(lat1)) * Math.Cos(ToRad(lat2)) * Math.Sin(deltaLon / 2) * Math.Sin(deltaLon / 2);
         var c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
 
         return r * c; // returns the distance in meters
