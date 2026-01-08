@@ -16,7 +16,7 @@ class SensorDataReader
         string csvPath = args[0];
         string jsonPath = args[1];
 
-        List<SensorData> sensors = new();
+        List<SensorData> csvSensors = new();
 
         // =================== Read CSV sensor data ===================
         using var reader = new StreamReader(csvPath);
@@ -28,18 +28,24 @@ class SensorDataReader
             if (string.IsNullOrWhiteSpace(line)) continue;
             var fields = line.Split(',');
 
-            sensors.Add(new SensorData(int.Parse(fields[0]), double.Parse(fields[1]), double.Parse(fields[2])));
+            csvSensors.Add(new SensorData(int.Parse(fields[0]), double.Parse(fields[1]), double.Parse(fields[2])));
         }
 
-        Console.WriteLine($"CSV Rows: {sensors.Count}");
+        Console.WriteLine($"CSV Rows: {csvSensors.Count}");
         reader.Close();
         // ============================================================
 
         // =================== Read JSON sensor data ==================
         string jsonText = File.ReadAllText(jsonPath);
-        var jsonData = JsonDocument.Parse(jsonText);
+        var jsonSensors = JsonSerializer.Deserialize<List<SensorData>>(jsonText);
 
-        Console.WriteLine("JSON loaded successfully");
+        if (jsonSensors == null)
+        {
+            Console.WriteLine("Failed to read JSON sensor data.");
+            return;
+        }
+
+        Console.WriteLine($"JSON Rows: {jsonSensors.Count}");
         // ============================================================
     }
 }
