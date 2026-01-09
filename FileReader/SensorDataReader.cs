@@ -5,6 +5,19 @@ using System.Collections.Generic;
 record SensorData(int Id, double Latitude, double Longitude); // record to store data for each sensor
 class SensorDataReader
 {
+    class SensorMatch
+    {
+        public int id1
+        {
+            get;
+            set;
+        }
+        public int id2
+        {
+            get;
+            set;
+        }
+    }
     // =================== Helper Functions =======================
     static double ToRad(double deg)
     {
@@ -68,7 +81,7 @@ class SensorDataReader
 
 
         // =================== Evaluate Sensor Data ===================
-        List<(int csvId, int jsonId)> matches = new List<(int csvId, int jsonId)>();
+        var matches = new Dictionary<int, int>();
         const double MAX_DISTANCE = 100.0; // max distance of 100 meters as this is the accuracy of the sensors
 
         foreach (var csvSensor in csvSensors)
@@ -80,7 +93,7 @@ class SensorDataReader
                 if (distance <= MAX_DISTANCE) // match found
                 {
                     Console.WriteLine($"Match found.. CSV ID: {csvSensor.Id} JSON ID: {jsonSensor.Id}");
-                    matches.Add((csvSensor.Id, jsonSensor.Id)); // store matching ids
+                    matches[csvSensor.Id] = jsonSensor.Id; // add match to the dictionary
                 }
             }
         }
@@ -105,7 +118,6 @@ class SensorDataReader
         {
             Console.WriteLine($"An Error Occured: {ex.Message}\n"); 
         }
-        
         // ============================================================
     }
 }
