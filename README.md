@@ -7,7 +7,7 @@ The two sensors provide different output formats: one sensor outputs data in CSV
 The output should consist of pairs of IDs, where one ID is from the first sensor, and the second ID is from the second sensor.
 
 ## Solution
-All necessary files, for both input and output, are located in the **FileReader** directory.
+All necessary files, for both input and output, are located in the **FileReader** directory. The program which contains my solution is labeled **SensorDataReader.cs** inside the aforementioned directory.
 
 ### Considerations
 Note that this solution isn't necessarily optimized in the way I would like it to be. This is because comparing the distances of each sensor location currently has a time complexity of O(n^2). This works perfectly fine for the given sample inputs, but for much larger datasets this could take far longer to compute than we would like it to. Ideally, I could store all the data in a database which I could then query in order to get the necessary information from each sensor, but I felt that that would have made this solution somewhat redundant and more complex than it was required for the given dataset.
